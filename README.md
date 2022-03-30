@@ -2,4 +2,4 @@
 © 2022 Dark Tornado, All rights reserved.
 
 * 니들은 메모장으로 이런거 하지 마라
-* 아직 미완성
+* 아직 미완성. [여기](https://darktornado.github.io/MetroMapSVG/)서 현황 구경 가능
