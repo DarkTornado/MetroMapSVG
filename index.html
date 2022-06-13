@@ -3,7 +3,6 @@
 © 2022 Dark Tornado, All rights reserved.
 -->
 <html>
-
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="user-scalable=no width=device-width" />
@@ -14,25 +13,26 @@ Nusty Metro Map
 </head>
 <style>
 body {
-margin: 0px;
+  margin: 0px;
 }
 polyline, polygon, line {
-stroke-width: 15;
-stroke-linejoin: round;
-stroke-linecap: round;
+ stroke-width: 15;
+ stroke-linejoin: round;
+ stroke-linecap: round;
 }
-
-circle {  /* 일단 아무 색이나 넣음 */
-fill: #414141;
-opacity: 0.5;
+circle {
+ fill: #414141;
+ opacity: 0.5;
 }
-
 text {
 font-size: 40px;
 }
 </style>
-
 <body bgcolor=#FFFFFF>
+<!--div style="position: relative; z-index: 1;">
+<img src="seoul.png">
+</div>
+<div style="position: relative;top: -6000px; z-index: 2;"-->
 <div>
 <svg width="9000" height="6000" viewBox="0 0 9000 6000">
 
@@ -162,7 +162,7 @@ font-size: 40px;
 
 <!-- 우이신설선 -->
 <polyline points="
-    5120,810 5530,1210 6170,1210 6170,1780
+    5000,760 5450,1210 6170,1210 6170,1780
     " fill="none" stroke="#B7C450" />
 
 <!-- 의정부경전철 -->
@@ -172,12 +172,12 @@ font-size: 40px;
 
 <!-- 용인경전철 -->
 <polyline points="
-    5400,5160 5400,5470 6890,5470 7050,5640
+    5400,5160 5400,5500 7100,5500
     " fill="none" stroke="#56AD2D" />
 
 <!-- 김포도시철도 -->
 <polyline points="
-    750,1860 2000,1860 2210,2050
+    700,1840 2000,1840 2210,2050
     " fill="none" stroke="#AD8605" />
 
 <!-- 공항철도 -->
@@ -197,7 +197,7 @@ font-size: 40px;
     170,1830 870,2530 870,3800 1360,4280 1990,4280
     2200,4500 2200,5000
     " fill="none" stroke="#F5A251" />
-
+  
 
 <!--1호선/경원선-->
 <circle cx="4548" cy="470" r="15" onClick="selectStation('소요산', 1);"/>
@@ -476,7 +476,7 @@ font-size: 40px;
 <circle cx="5386" cy="2215" r="20" onClick="selectStation('을지로4가', 1);"/>
 <text x=5290 y=2270 onClick="selectStation2(this, 1);">을지로4가</text>
 <circle cx="5598" cy="2215" r="20" onClick="selectStation('동대문역사문화공원', 1);"/>
-<text x=5620 y=2140 onClick="selectStation2(this, 1);">동대문역사<tspan dx=-200 dy=50>문화공원</text>
+<text x=5620 y=2140 onClick="selectStation2(this, 1);">동대문역사<tspan dx=-200 dy=50>문화공원</tspan></text>
 <circle cx="5950" cy="2220" r="20" onClick="selectStation('신당', 1);"/>
 <text x=5980 y=2220 onClick="selectStation2(this, 1);">신당</text>
 <circle cx="6080" cy="2352" r="15" onClick="selectStation('상왕십리', 1);"/>
@@ -810,7 +810,7 @@ font-size: 40px;
 <circle cx="4045" cy="2597" r="15" onClick="selectStation('대흥', 1);"/>
 <text x=4045 y=2647 onClick="selectStation2(this, 1);">대흥</text>
 <circle cx="4300" cy="2670" r="20" onClick="selectStation('효창공원앞', 1);"/>
-<text x=4240 y=2740 onClick="selectStation2(this, 1);">효창<tspan dx=-80 dy=50>공원앞</text>
+<text x=4240 y=2740 onClick="selectStation2(this, 1);">효창<tspan dx=-80 dy=50>공원앞</tspan></text>
 <circle cx="4700" cy="2670" r="15" onClick="selectStation('녹사평', 1);"/>
 <text x=4640 y=2730 onClick="selectStation2(this, 1);">녹사평</text>
 <circle cx="4850" cy="2670" r="15" onClick="selectStation('이태원', 1);"/>
@@ -866,7 +866,7 @@ font-size: 40px;
 <circle cx="7380" cy="2410" r="15" onClick="selectStation('중곡', 1);"/>
 <text x=7400 y=2425 onClick="selectStation2(this, 1);">중곡</text>
 <circle cx="7104" cy="2836" r="15" onClick="selectStation('어린이대공원', 1);"/>
-<text x=7120 y=2870 onClick="selectStation2(this, 1);">어린이<tspan dx=-120 dy=50>대공원</text>
+<text x=7120 y=2870 onClick="selectStation2(this, 1);">어린이<tspan dx=-120 dy=50>대공원</tspan></text>
 <circle cx="6660" cy="3280" r="15" onClick="selectStation('뚝섬유원지', 1);"/>
 <text x=6680 y=3310 onClick="selectStation2(this, 1);">뚝섬유원지</text>
 <circle cx="6490" cy="3450" r="15" onClick="selectStation('청담', 1);"/>
@@ -1193,7 +1193,7 @@ font-size: 40px;
 <text x=7128 y=1874 onClick="selectStation2(this, 1);">중랑</text>
 <circle cx="7700" cy="1802" r="20" onClick="selectStation('망우', 1);"/>
 <text x=7660 y=1760 onClick="selectStation2(this, 1);">망우</text>
-<circle cx="7750" cy="1860" r="15" onClick="selectStation('양원', 1);"/>
+<circle cx="7750" cy="1840" r="15" onClick="selectStation('양원', 1);"/>
 <text x=7650 y=1890 onClick="selectStation2(this, 1);">양원</text>
 <circle cx="7800" cy="1910" r="15" onClick="selectStation('구리', 1);"/>
 <text x=7700 y=1940 onClick="selectStation2(this, 1);">구리</text>
@@ -1282,7 +1282,7 @@ font-size: 40px;
 <circle cx="4800" cy="5418" r="15" onClick="selectStation('수원시청', 1);"/>
 <text x=4820 y=5448 onClick="selectStation2(this, 1);">수원시청</text>
 <circle cx="4710" cy="5504" r="15" onClick="selectStation('매교', 1);"/>
-<text x=4730 y=5534 onClick="selectStation2(this, 1);">매교</text>
+<text x=4730 y=5560 onClick="selectStation2(this, 1);">매교</text>
 <!--수인분당선/수인선-->
 <circle cx="4450" cy="5590" r="15" onClick="selectStation('고색', 1);"/>
 <text x=4410 y=5650 onClick="selectStation2(this, 1);">고색</text>
@@ -1305,7 +1305,7 @@ font-size: 40px;
 <circle cx="2350" cy="5800" r="15" onClick="selectStation('호구포', 1);"/>
 <text x=2290 y=5860 onClick="selectStation2(this, 1);">호구포</text>
 <circle cx="2170" cy="5800" r="15" onClick="selectStation('남동인더스파크', 1);"/>
-<text x=2070 y=5860 onClick="selectStation2(this, 1);">남동<tspan dx=-140 dy=50>인더스파크</text>
+<text x=2070 y=5860 onClick="selectStation2(this, 1);">남동<tspan dx=-140 dy=50>인더스파크</tspan></text>
 <circle cx="1864" cy="5674" r="15" onClick="selectStation('연수', 1);"/>
 <text x=1884 y=5674 onClick="selectStation2(this, 1);">연수</text>
 <circle cx="1738" cy="5548" r="15" onClick="selectStation('송도', 1);"/>
@@ -1395,7 +1395,131 @@ font-size: 40px;
 <circle cx="8550" cy="5400" r="15" onClick="selectStation('여주', 1);"/>
 <text x=8510 y=5465 onClick="selectStation2(this, 1);">여주</text>
 
+<!--의정부경전철-->
+<circle cx="6880" cy="350" r="15" onClick="selectStation('발곡', 1);"/>
+<text x=6900 y=365 onClick="selectStation2(this, 1);">발곡</text>
+<circle cx="6880" cy="540" r="15" onClick="selectStation('범골', 1);"/>
+<text x=6860 y=600 onClick="selectStation2(this, 1);">범골</text>
+<circle cx="6770" cy="570" r="15" onClick="selectStation('경전철의정부', 1);"/>
+<text x=6710 y=630 onClick="selectStation2(this, 1);">경전철<tspan dx=-120 dy=50>의정부</tspan></text>
+<circle cx="6610" cy="570" r="15" onClick="selectStation('의정부시청', 1);"/>
+<text x=6550 y=630 onClick="selectStation2(this, 1);">의정부<tspan dx=-100 dy=50>시청</tspan></text>
+<circle cx="6500" cy="540" r="15" onClick="selectStation('흥선', 1);"/>
+<text x=6400 y=555 onClick="selectStation2(this, 1);">흥선</text>
+<circle cx="6500" cy="360" r="15" onClick="selectStation('의정부중앙', 1);"/>
+<text x=6280 y=375 onClick="selectStation2(this, 1);">의정부중앙</text>
+<circle cx="6500" cy="260" r="15" onClick="selectStation('동오', 1);"/>
+<text x=6400 y=275 onClick="selectStation2(this, 1);">동오</text>
+<circle cx="6500" cy="160" r="15" onClick="selectStation('새말', 1);"/>
+<text x=6400 y=175 onClick="selectStation2(this, 1);">새말</text>
+<circle cx="6650" cy="160" r="15" onClick="selectStation('경기도청북부청사', 1);"/>
+<text x=6490 y=130 onClick="selectStation2(this, 1);">경기도청북부청사</text>
+<circle cx="6800" cy="160" r="15" onClick="selectStation('효자', 1);"/>
+<text x=6760 y=220 onClick="selectStation2(this, 1);">효자</text>
+<circle cx="6950" cy="160" r="15" onClick="selectStation('곤제', 1);"/>
+<text x=6910 y=220 onClick="selectStation2(this, 1);">곤제</text>
+<circle cx="7100" cy="160" r="15" onClick="selectStation('어룡', 1);"/>
+<text x=7060 y=220 onClick="selectStation2(this, 1);">어룡</text>
+<circle cx="7250" cy="160" r="15" onClick="selectStation('송산', 1);"/>
+<text x=7210 y=220 onClick="selectStation2(this, 1);">송산</text>
+<circle cx="7400" cy="160" r="15" onClick="selectStation('탑석', 1);"/>
+<text x=7360 y=220 onClick="selectStation2(this, 1);">탑석</text>
 
+<circle cx="7550" cy="210" r="15" onClick="selectStation('차량기지임시승강장', 1);"/>
+<text x=7570 y=225 onClick="selectStation2(this, 1);">차량기지임시승강장</text>
+
+<!--용인경전철-->
+<circle cx="5400" cy="5300" r="15" onClick="selectStation('강남대', 1);"/>
+<text x=5420 y=5315 onClick="selectStation2(this, 1);">강남대</text>
+<circle cx="5400" cy="5400" r="15" onClick="selectStation('지석', 1);"/>
+<text x=5420 y=5415 onClick="selectStation2(this, 1);">지석</text>
+<circle cx="5400" cy="5500" r="15" onClick="selectStation('어정', 1);"/>
+<text x=5360 y=5560 onClick="selectStation2(this, 1);">어정</text>
+<circle cx="5550" cy="5500" r="15" onClick="selectStation('동백', 1);"/>
+<text x=5510 y=5560 onClick="selectStation2(this, 1);">동백</text>
+<circle cx="5700" cy="5500" r="15" onClick="selectStation('초당', 1);"/>
+<text x=5660 y=5560 onClick="selectStation2(this, 1);">초당</text>
+<circle cx="5850" cy="5500" r="15" onClick="selectStation('삼가', 1);"/>
+<text x=5810 y=5560 onClick="selectStation2(this, 1);">삼가</text>
+<circle cx="6000" cy="5500" r="15" onClick="selectStation('시청·용인대', 1);"/>
+<text x=5900 y=5465 onClick="selectStation2(this, 1);">시청·용인대</text>
+<circle cx="6150" cy="5500" r="15" onClick="selectStation('명지대', 1);"/>
+<text x=6090 y=5560 onClick="selectStation2(this, 1);">명지대</text>
+<circle cx="6300" cy="5500" r="15" onClick="selectStation('김량장', 1);"/>
+<text x=6240 y=5560 onClick="selectStation2(this, 1);">김량장</text>
+<circle cx="6450" cy="5500" r="15" onClick="selectStation('운동장·송담대', 1);"/>
+<text x=6325 y=5465 onClick="selectStation2(this, 1);">운동장·송담대</text>
+<circle cx="6600" cy="5500" r="15" onClick="selectStation('고진', 1);"/>
+<text x=6560 y=5560 onClick="selectStation2(this, 1);">고진</text>
+<circle cx="6750" cy="5500" r="15" onClick="selectStation('보평', 1);"/>
+<text x=6710 y=5560 onClick="selectStation2(this, 1);">보평</text>
+<circle cx="6900" cy="5500" r="15" onClick="selectStation('둔전', 1);"/>
+<text x=6860 y=5560 onClick="selectStation2(this, 1);">둔전</text>
+<circle cx="7050" cy="5500" r="15" onClick="selectStation('전대·에버랜드', 1);"/>
+<text x=6930 y=5465 onClick="selectStation2(this, 1);">전대·에버랜드</text>
+
+<!--우이신설선-->
+<circle cx="5050" cy="810" r="15" onClick="selectStation('북한산우이', 1);"/>
+<text x=5070 y=810 onClick="selectStation2(this, 1);">북한산우이</text>
+<circle cx="5150" cy="910" r="15" onClick="selectStation('4·19민주묘지', 1);"/>
+<text x=5170 y=910 onClick="selectStation2(this, 1);">4·19민주묘지</text>
+<circle cx="5250" cy="1010" r="15" onClick="selectStation('가오리', 1);"/>
+<text x=5270 y=1010 onClick="selectStation2(this, 1);">가오리</text>
+<circle cx="5350" cy="1110" r="15" onClick="selectStation('화계', 1);"/>
+<text x=5370 y=1110 onClick="selectStation2(this, 1);">화계</text>
+<circle cx="5450" cy="1210" r="15" onClick="selectStation('삼양', 1);"/>
+<text x=5410 y=1270 onClick="selectStation2(this, 1);">삼양</text>
+<circle cx="5600" cy="1210" r="15" onClick="selectStation('삼양사거리', 1);"/>
+<text x=5498 y=1175 onClick="selectStation2(this, 1);">삼양사거리</text>
+<circle cx="5750" cy="1210" r="15" onClick="selectStation('솔셈', 1);"/>
+<text x=5710 y=1270 onClick="selectStation2(this, 1);">솔셈</text>
+<circle cx="5900" cy="1210" r="15" onClick="selectStation('북한산보국문', 1);"/>
+<text x=5780 y=1175 onClick="selectStation2(this, 1);">북한산보국문</text>
+<circle cx="6050" cy="1210" r="15" onClick="selectStation('정릉', 1);"/>
+<text x=6010 y=1270 onClick="selectStation2(this, 1);">정릉</text>
+
+<!--서해선-->
+<circle cx="2720" cy="4126" r="15" onClick="selectStation('소새울', 1);"/>
+<text x=2745 y=4141 onClick="selectStation2(this, 1);">소새울</text>
+<circle cx="2720" cy="4282" r="15" onClick="selectStation('시흥대야', 1);"/>
+<text x=2745 y=4307 onClick="selectStation2(this, 1);">시흥대야</text>
+<circle cx="2720" cy="4438" r="15" onClick="selectStation('신천', 1);"/>
+<text x=2745 y=4453 onClick="selectStation2(this, 1);">신천</text>
+<circle cx="2720" cy="4594" r="15" onClick="selectStation('신현', 1);"/>
+<text x=2745 y=4609 onClick="selectStation2(this, 1);">신현</text>
+<circle cx="2720" cy="4750" r="15" onClick="selectStation('시흥시청', 1);"/>
+<text x=2740 y=4750 onClick="selectStation2(this, 1);">시흥시청</text>
+<circle cx="2910" cy="4942" r="15" onClick="selectStation('시흥능곡', 1);"/>
+<text x=2930 y=4942 onClick="selectStation2(this, 1);">시흥능곡</text>
+<circle cx="3100" cy="5134" r="15" onClick="selectStation('달미', 1);"/>
+<text x=3120 y=5134 onClick="selectStation2(this, 1);">달미</text>
+<circle cx="3290" cy="5326" r="15" onClick="selectStation('선부', 1);"/>
+<text x=3310 y=5326 onClick="selectStation2(this, 1);">선부</text>
+<circle cx="3640" cy="5680" r="15" onClick="selectStation('원곡', 1);"/>
+<text x=3660 y=5680 onClick="selectStation2(this, 1);">원곡</text>
+<circle cx="3730" cy="5770" r="15" onClick="selectStation('원시', 1);"/>
+<text x=3750 y=5770 onClick="selectStation2(this, 1);">원시</text>
+
+<!--김포도시철도-->
+<circle cx="2000" cy="1840" r="15" onClick="selectStation('고촌', 1);"/>
+<text x=1920 y=1900 onClick="selectStation2(this, 1);">고촌</text>
+<circle cx="1850" cy="1840" r="15" onClick="selectStation('풍무', 1);"/>
+<text x=1810 y=1900 onClick="selectStation2(this, 1);">풍무</text>
+<circle cx="1700" cy="1840" r="15" onClick="selectStation('사우', 1);"/>
+<text x=1660 y=1900 onClick="selectStation2(this, 1);">사우</text>
+<circle cx="1550" cy="1840" r="15" onClick="selectStation('걸포북변', 1);"/>
+<text x=1470 y=1900 onClick="selectStation2(this, 1);">걸포북변</text>
+<circle cx="1400" cy="1840" r="15" onClick="selectStation('운양', 1);"/>
+<text x=1360 y=1900 onClick="selectStation2(this, 1);">운양</text>
+<circle cx="1250" cy="1840" r="15" onClick="selectStation('장기', 1);"/>
+<text x=1210 y=1900 onClick="selectStation2(this, 1);">장기</text>
+<circle cx="1100" cy="1840" r="15" onClick="selectStation('마산', 1);"/>
+<text x=1060 y=1900 onClick="selectStation2(this, 1);">마산</text>
+<circle cx="950" cy="1840" r="15" onClick="selectStation('구래', 1);"/>
+<text x=910 y=1900 onClick="selectStation2(this, 1);">구래</text>
+<circle cx="800" cy="1840" r="15" onClick="selectStation('양촌', 1);"/>
+<text x=760 y=1900 onClick="selectStation2(this, 1);">양촌</text>
+  
 </svg>
 </div>
 <script>
@@ -1408,5 +1532,4 @@ alert('글자: ' + a.innerHTML);
 }
 </script>
 </body>
-
 </html>
