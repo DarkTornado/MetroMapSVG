@@ -29,10 +29,6 @@ font-size: 40px;
 }
 </style>
 <body bgcolor=#FFFFFF>
-<!--div style="position: relative; z-index: 1;">
-<img src="seoul.png">
-</div>
-<div style="position: relative;top: -6000px; z-index: 2;"-->
 <div>
 <svg width="9000" height="6000" viewBox="0 0 9000 6000">
 
@@ -180,6 +176,12 @@ font-size: 40px;
     700,1840 2000,1840 2210,2050
     " fill="none" stroke="#AD8605" />
 
+<!-- 신림선 -->
+<polyline points="
+    4324,3099 4324,3500 3950,3500 3950,3660 4110,4140
+    4110,4500
+    " fill="none" stroke="#6789CA" />
+
 <!-- 공항철도 -->
 <polyline points="
     4430,2330 4180,2540 3640,2540 3130,2050 1370,2050
@@ -274,7 +276,7 @@ font-size: 40px;
 <text x=4455 y=2800 onClick="selectStation2(this, 1);">용산</text>
 <circle cx="4430" cy="3200" r="20" onClick="selectStation('노량진', 1);"/>
 <text x=4455 y=3180 onClick="selectStation2(this, 1);">노량진</text>
-<circle cx="4324" cy="3300" r="15" onClick="selectStation('대방', 1);"/>
+<circle cx="4324" cy="3300" r="20" onClick="selectStation('대방', 1);"/>
 <text x=4340 y=3350 onClick="selectStation2(this, 1);">대방</text>
 <circle cx="4178" cy="3350" r="20" onClick="selectStation('신길', 1);"/>
 <text x=4138 y=3410 onClick="selectStation2(this, 1);">신길</text>
@@ -443,12 +445,12 @@ font-size: 40px;
 <text x=4399 y=4200 onClick="selectStation2(this, 1);">서울대입구</text>
 <circle cx="4294" cy="4140" r="15" onClick="selectStation('봉천', 1);"/>
 <text x=4254 y=4200 onClick="selectStation2(this, 1);">봉천</text>
-<circle cx="4110" cy="4140" r="15" onClick="selectStation('신림', 1);"/>
-<text x=4070 y=4200 onClick="selectStation2(this, 1);">신림</text>
+<circle cx="4110" cy="4140" r="20" onClick="selectStation('신림', 1);"/>
+<text x=4120 y=4110 onClick="selectStation2(this, 1);">신림</text>
 <circle cx="3969" cy="3996" r="15" onClick="selectStation('신대방', 1);"/>
-<text x=3989 y=3986 onClick="selectStation2(this, 1);">신대방</text>
+<text x=3830 y=4030 onClick="selectStation2(this, 1);">신대방</text>
 <circle cx="3837" cy="3862" r="15" onClick="selectStation('구로디지털단지', 1);"/>
-<text x=3857 y=3852 onClick="selectStation2(this, 1);">구로디지털단지</text>
+<text x=3540 y=3900 onClick="selectStation2(this, 1);">구로디지털단지</text>
 <circle cx="3640" cy="3660" r="20" onClick="selectStation('대림', 1);"/>
 <text x=3660 y=3630 onClick="selectStation2(this, 1);">대림</text>
 <circle cx="3640" cy="3260" r="15" onClick="selectStation('문래', 1);"/>
@@ -585,7 +587,7 @@ font-size: 40px;
 <circle cx="8040" cy="4330" r="15" onClick="selectStation('경찰병원', 1);"/>
 <text x=7960 y=4390 onClick="selectStation2(this, 1);">경찰병원</text>
 <circle cx="8380" cy="4330" r="20" onClick="selectStation('오금', 1);"/>
-<text x=8900 y=4400 onClick="selectStation2(this, 1);">오금</text>
+<text x=8340 y=4400 onClick="selectStation2(this, 1);">오금</text>
 
 <!--4호선/진접선-->
 <circle cx="8280" cy="900" r="15" onClick="selectStation('진접', 1);"/>
@@ -889,8 +891,8 @@ font-size: 40px;
 <text x=4190 y=3720 onClick="selectStation2(this, 1);">장승배기</text>
 <circle cx="4110" cy="3660" r="15" onClick="selectStation('신대방삼거리', 1);"/>
 <text x=3990 y=3630 onClick="selectStation2(this, 1);">신대방삼거리</text>
-<circle cx="3950" cy="3660" r="15" onClick="selectStation('보라매', 1);"/>
-<text x=3890 y=3720 onClick="selectStation2(this, 1);">보라매</text>
+<circle cx="3950" cy="3660" r="20" onClick="selectStation('보라매', 1);"/>
+<text x=3810 y=3630 onClick="selectStation2(this, 1);">보라매</text>
 <circle cx="3790" cy="3660" r="15" onClick="selectStation('신풍', 1);"/>
 <text x=3750 y=3720 onClick="selectStation2(this, 1);">신풍</text>
 <circle cx="3520" cy="3660" r="15" onClick="selectStation('남구로', 1);"/>
@@ -981,7 +983,7 @@ font-size: 40px;
 <text x=3330 y=3020 onClick="selectStation2(this, 1);">선유도</text>
 <circle cx="4000" cy="2960" r="15" onClick="selectStation('국회의사당', 1);"/>
 <text x=3900 y=3020 onClick="selectStation2(this, 1);">국회의사당</text>
-<circle cx="4324" cy="3099" r="15" onClick="selectStation('샛강', 1);"/>
+<circle cx="4324" cy="3099" r="20" onClick="selectStation('샛강', 1);"/>
 <text x=4220 y=3130 onClick="selectStation2(this, 1);">샛강</text>
 <circle cx="4590" cy="3260" r="15" onClick="selectStation('노들', 1);"/>
 <text x=4610 y=3250 onClick="selectStation2(this, 1);">노들</text>
@@ -1519,7 +1521,23 @@ font-size: 40px;
 <text x=910 y=1900 onClick="selectStation2(this, 1);">구래</text>
 <circle cx="800" cy="1840" r="15" onClick="selectStation('양촌', 1);"/>
 <text x=760 y=1900 onClick="selectStation2(this, 1);">양촌</text>
-  
+
+<!--신림선-->
+<circle cx="4324" cy="3500" r="15" onClick="selectStation('서울지방병무청', 1);"/>
+<text x=4340 y=3515 onClick="selectStation2(this, 1);">서울지방병무청</text>
+<circle cx="3997" cy="3800" r="15" onClick="selectStation('보라매공원', 1);"/>
+<text x=4017 y=3810 onClick="selectStation2(this, 1);">보라매공원</text>
+<circle cx="4030" cy="3900" r="15" onClick="selectStation('보라매병원', 1);"/>
+<text x=4050 y=3910 onClick="selectStation2(this, 1);">보라매병원</text>
+<circle cx="4064" cy="4000" r="15" onClick="selectStation('당곡', 1);"/>
+<text x=4084 y=4010 onClick="selectStation2(this, 1);">당곡</text>
+<circle cx="4110" cy="4240" r="15" onClick="selectStation('서원', 1);"/>
+<text x=4130 y=4255 onClick="selectStation2(this, 1);">서원</text>
+<circle cx="4110" cy="4340" r="15" onClick="selectStation('서울대벤쳐타운', 1);"/>
+<text x=4130 y=4355 onClick="selectStation2(this, 1);">서울대벤쳐타운</text>
+<circle cx="4110" cy="4440" r="15" onClick="selectStation('관악산', 1);"/>
+<text x=4130 y=4455 onClick="selectStation2(this, 1);">관악산</text>
+
 </svg>
 </div>
 <script>
