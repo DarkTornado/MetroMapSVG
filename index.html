@@ -139,7 +139,7 @@ font-size: 70px;
 
 <!-- 경의중앙선/경의선 -->
 <polyline points="
-    540,610 1690,610 3130,2050 3640,2050 4300,2050
+    640,610 1690,610 3130,2050 3640,2050 4300,2050
     4430,2330
     " fill="none" stroke="#77C4A3" />
 <!-- 경의중앙선/중앙선 -->
@@ -147,6 +147,8 @@ font-size: 70px;
     3640,2050 3640,2540 3910,2500 4180,2540 4640,3030
     5310,3030 6280,2560 6700,1810 7700,1810 8550,2660
     " fill="none" stroke="#77C4A3" />
+<!-- 경의중앙선/도라산 -->
+<line x1="500" y1="610" x2="650" y2="610" stroke="#77C4A3" style='stroke-width:10;'/>
 <text class=line_name style='fill:#77C4A3;' x=500 y=500>경의·중앙선</text>
 <text class=line_name style='fill:#77C4A3;' x=4470 y=2100>경의·중앙선</text>
 <text class=line_name style='fill:#77C4A3;' x=8500 y=2800>경의·중앙선</text>
@@ -203,8 +205,10 @@ font-size: 70px;
 
 <!-- 의정부경전철 -->
 <polyline points="
-  6880,350 6880,540 6690,590 6500,540 6500,160 7500,160
+  6880,350 6880,540 6690,590 6500,540 6500,160 7400,160
   " fill="none" stroke="#FD8100" />
+<!-- 의정부경전철/차량기지임시승강장 -->
+<line x1="7400" y1="160" x2="7600" y2="160" stroke="#FD8100" style='stroke-width:10;'/>
 <text class=line_name style='fill:#FD8100;' x=7000 y=330>의정부경전철</text>
 
 <!-- 용인경전철 -->
@@ -1190,9 +1194,8 @@ font-size: 70px;
 <text x=500 y=3815 onClick="selectStation2(this, 1);">인천공항2터미널</text>
 
 <!--경의중앙선/경의선-->
-<circle cx="550" cy="510" r="15" onClick="selectStation('도라산', 1);"/>
-<text x=424 y=630 onClick="selectStation2(this, 1);">도라산</text>
-
+<circle cx="500" cy="610" r="15" onClick="selectStation('도라산', 1);"/>
+<text x=440 y=670 onClick="selectStation2(this, 1);">도라산</text>
 <circle cx="640" cy="610" r="15" onClick="selectStation('임진강', 1);"/>
 <text x=580 y=670 onClick="selectStation2(this, 1);">임진강</text>
 <circle cx="790" cy="610" r="15" onClick="selectStation('문산', 1);"/>
@@ -1479,9 +1482,8 @@ font-size: 70px;
 <text x=7210 y=220 onClick="selectStation2(this, 1);">송산</text>
 <circle cx="7400" cy="160" r="15" onClick="selectStation('탑석', 1);"/>
 <text x=7360 y=220 onClick="selectStation2(this, 1);">탑석</text>
-
-<circle cx="7550" cy="210" r="15" onClick="selectStation('차량기지임시승강장', 1);"/>
-<text x=7570 y=225 onClick="selectStation2(this, 1);">차량기지임시승강장</text>
+<circle cx="7600" cy="160" r="15" onClick="selectStation('차량기지임시승강장', 1);"/>
+<text x=7420 y=130 onClick="selectStation2(this, 1);">차량기지임시승강장</text>
 
 <!--용인경전철-->
 <circle cx="5400" cy="5300" r="15" onClick="selectStation('강남대', 1);"/>
