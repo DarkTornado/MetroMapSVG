@@ -1,0 +1,22 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="916.17786mm" height="300mm" viewBox="0 0 916.17786 300" version="1.1" id="svg8">
+  <defs id="defs2">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath26">
+      <path d="M 0,813.04 H 617.04 V 0 H 0 Z" id="path24"></path>
+    </clipPath>
+  </defs>
+  
+  
+  <g id="layer1" transform="translate(35.768904,-294.07189)">
+    <g id="g1274" transform="matrix(6.4510116,0,0,6.4510116,38.923689,552.49331)">
+      <g id="g1267">
+        <g id="g276" transform="matrix(1.1972693,0,0,-1.1972693,81.709201,6.4452805)" style="fill:#144999;fill-opacity:1">
+          <path d="m 0,0 h 11.557 l -10.373,23.502 -4.835,-3.331 4.102,4.996 -3.052,6.917 h -43.453 l -15.078,-10.478 1.931,2.348 2.368,7.918 H -68.391 L -77.917,0 h 11.556 l 3.55,11.872 1.647,1.057 L -56.325,0 h 11.555 l -7.133,18.87 9.445,6.051 h 9.238 L -40.668,0 h 11.556 l 7.45,24.921 H -11 Z" style="fill:#144999;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path278"></path>
+        </g>
+        <g id="g280" transform="matrix(1.1972693,0,0,-1.1972693,53.146666,6.4452805)" style="fill:#c21540;fill-opacity:1">
+          <path d="M 0,0 H 12.584 C 33.694,26.3 45.462,33.822 64.56,38.842 32.728,35.561 19.363,21.735 0,0" style="fill:#c21540;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path282"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
