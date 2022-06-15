@@ -35,13 +35,88 @@ text.line_name {
   font-weight: bold;
   font-size: 70px;
 }
+text.title {
+  font-weight: bold;
+  font-size: 200px;
+}
+polygon.index {
+  stroke-width: 10;
+}
+text.index {
+  font-weight: bold;
+  font-size: 50px;
+}
 </style>
 <body bgcolor=#FFFFFF>
 <div>
 <svg width="9000" height="6000" viewBox="0 0 9000 6000">
+<!-- 노선도 종류 -->
+<text class=title x=100 y=300>수도권전철노선도</text>
+
+<!-- 범례 -->
+<polygon class=index points="
+    2000,100 4400,100 4400,700 2000,700
+	" fill="none" stroke="#000000" />
+<line x1="2100" y1="200" x2="2250" y2="200" stroke="#0052A4" />
+<text class=index x=2270 y=215>1호선</text>
+<line x1="2100" y1="300" x2="2250" y2="300" stroke="#00A84D" />
+<text class=index x=2270 y=315>2호선</text>
+<line x1="2100" y1="400" x2="2250" y2="400" stroke="#EF7C1C" />
+<text class=index x=2270 y=415>3호선</text>
+<line x1="2100" y1="500" x2="2250" y2="500" stroke="#00A4E3" />
+<text class=index x=2270 y=515>4호선</text>
+<line x1="2100" y1="600" x2="2250" y2="600" stroke="#996CAC" />
+<text class=index x=2270 y=615>5호선</text>
+
+<line x1="2450" y1="200" x2="2600" y2="200" stroke="#CD7C2F" />
+<text class=index x=2620 y=215>6호선</text>
+<line x1="2450" y1="300" x2="2600" y2="300" stroke="#747F00" />
+<text class=index x=2620 y=315>7호선</text>
+<line x1="2450" y1="400" x2="2600" y2="400" stroke="#E6186C" />
+<text class=index x=2620 y=415>8호선</text>
+<line x1="2450" y1="500" x2="2600" y2="500" stroke="#BDB092" />
+<text class=index x=2620 y=515>9호선</text>
+<line x1="2450" y1="600" x2="2600" y2="600" stroke="#0090D2" />
+<text class=index x=2620 y=615>공항철도</text>
+
+<line x1="2870" y1="200" x2="3020" y2="200" stroke="#759CCE" />
+<text class=index x=3040 y=215>인천1호선</text>
+<line x1="2870" y1="300" x2="3020" y2="300" stroke="#F5A251" />
+<text class=index x=3040 y=315>인천2호선</text>
+<line x1="2870" y1="400" x2="3020" y2="400" stroke="#77C4A3" />
+<text class=index x=3040 y=415>경의·중앙선</text>
+<line x1="2870" y1="500" x2="3020" y2="500" stroke="#FABE00" />
+<text class=index x=3040 y=515>수인·분당선</text>
+<line x1="2870" y1="600" x2="3020" y2="600" stroke="#D31145" />
+<text class=index x=3040 y=615>신분당선</text>
+
+<line x1="3350" y1="200" x2="3500" y2="200" stroke="#178C72" />
+<text class=index x=3520 y=215>경춘선</text>
+<line x1="3350" y1="300" x2="3500" y2="300" stroke="#0054A6" />
+<text class=index x=3520 y=315>경강선</text>
+<line x1="3350" y1="400" x2="3500" y2="400" stroke="#8FC31F" />
+<text class=index x=3520 y=415>서해선</text>
+<line x1="3350" y1="500" x2="3505" y2="500" stroke="#FD8100" />
+<text class=index x=3520 y=515>의정부경전철</text>
+<line x1="3350" y1="600" x2="3500" y2="600" stroke="#56AD2D" />
+<text class=index x=3520 y=615>용인경전철</text>
+
+<line x1="3870" y1="200" x2="4020" y2="200" stroke="#B7C450" />
+<text class=index x=4040 y=215>우이신설선</text>
+<line x1="3870" y1="300" x2="4020" y2="300" stroke="#AD8605" />
+<text class=index x=4040 y=315>김포도시철도</text>
+<line x1="3870" y1="400" x2="4020" y2="400" stroke="#6789CA" />
+<text class=index x=4040 y=415>신림선</text>
+<line x1="3870" y1="500" x2="4020" y2="500" stroke="#000000" />
+<circle cx="3950" cy="500" r="20" />
+<text class=index x=4040 y=515>환승역</text>
+<line x1="3870" y1="600" x2="4020" y2="600" stroke="#000000" />
+<circle cx="3950" cy="600" r="15" class=exp />
+<text class=index x=4040 y=615>급행정차역</text>
+
 <!-- 1호선/경원선&종로선&경인선 -->
 <polyline points="
-    4500,470 6880,470 7160,680 7160,1720 7100,1780
+    4600,470 6880,470 7160,680 7160,1720 7100,1780
 	4430,1780 4430,3200 4270,3350 2900,3350 2900,3970
 	1680,3970 1360,4280 1360,5000
 	" fill="none" stroke="#0052A4" />
@@ -53,7 +128,7 @@ text.line_name {
 <line x1="3380" y1="4050" x2="3200" y2="4240" stroke="#0052A4" />
 <!-- 1호선/병점기지선 -->
 <line x1="5100" y1="5570" x2="4850" y2="5820" stroke="#0052A4" />
-<text class=line_name style='fill:#0052A4;' x=4400 y=400>1호선</text>
+<text class=line_name style='fill:#0052A4;' x=4500 y=400>1호선</text>
 <text class=line_name style='fill:#0052A4;' x=1100 y=4960>1호선</text>
 <text class=line_name style='fill:#0052A4;' x=8200 y=5750>1호선</text>
 <text class=line_name style='fill:#0052A4;' x=3130 y=4350>1호선</text>
@@ -263,26 +338,26 @@ text.line_name {
   
 
 <!--1호선/경원선-->
-<circle cx="4500" cy="470" r="15" onClick="selectStation('소요산', 1);" class=exp />
-<text x=4440 y=535 onClick="selectStation2(this, 1);">소요산</text>
-<circle cx="4700" cy="470" r="15" onClick="selectStation('동두천', 1);" class=exp />
-<text x=4640 y=535 onClick="selectStation2(this, 1);">동두천</text>
-<circle cx="4900" cy="470" r="15" onClick="selectStation('보산', 1);" />
-<text x=4860 y=535 onClick="selectStation2(this, 1);">보산</text>
-<circle cx="5100" cy="470" r="15" onClick="selectStation('동두천중앙', 1);" class=exp />
-<text x=5000 y=535 onClick="selectStation2(this, 1);">동두천중앙</text>
-<circle cx="5300" cy="470" r="15" onClick="selectStation('지행', 1);" />
-<text x=5260 y=535 onClick="selectStation2(this, 1);">지행</text>
-<circle cx="5500" cy="470" r="15" onClick="selectStation('덕정', 1);" class=exp />
-<text x=5460 y=535 onClick="selectStation2(this, 1);">덕정</text>
-<circle cx="5700" cy="470" r="15" onClick="selectStation('덕계', 1);" />
-<text x=5660 y=535 onClick="selectStation2(this, 1);">덕계</text>
-<circle cx="5900" cy="470" r="15" onClick="selectStation('양주', 1);" class=exp />
-<text x=5860 y=535 onClick="selectStation2(this, 1);">양주</text>
-<circle cx="6100" cy="470" r="15" onClick="selectStation('녹양', 1);" />
-<text x=6060 y=535 onClick="selectStation2(this, 1);">녹양</text>
-<circle cx="6300" cy="470" r="15" onClick="selectStation('가능', 1);" />
-<text x=6260 y=535 onClick="selectStation2(this, 1);">가능</text>
+<circle cx="4600" cy="470" r="15" onClick="selectStation('소요산', 1);" class=exp />
+<text x=4540 y=535 onClick="selectStation2(this, 1);">소요산</text>
+<circle cx="4800" cy="470" r="15" onClick="selectStation('동두천', 1);" class=exp />
+<text x=4740 y=535 onClick="selectStation2(this, 1);">동두천</text>
+<circle cx="5000" cy="470" r="15" onClick="selectStation('보산', 1);" />
+<text x=4960 y=535 onClick="selectStation2(this, 1);">보산</text>
+<circle cx="5200" cy="470" r="15" onClick="selectStation('동두천중앙', 1);" class=exp />
+<text x=5100 y=535 onClick="selectStation2(this, 1);">동두천중앙</text>
+<circle cx="5400" cy="470" r="15" onClick="selectStation('지행', 1);" />
+<text x=5360 y=535 onClick="selectStation2(this, 1);">지행</text>
+<circle cx="5600" cy="470" r="15" onClick="selectStation('덕정', 1);" class=exp />
+<text x=5560 y=535 onClick="selectStation2(this, 1);">덕정</text>
+<circle cx="5800" cy="470" r="15" onClick="selectStation('덕계', 1);" />
+<text x=5760 y=535 onClick="selectStation2(this, 1);">덕계</text>
+<circle cx="6000" cy="470" r="15" onClick="selectStation('양주', 1);" class=exp />
+<text x=5960 y=535 onClick="selectStation2(this, 1);">양주</text>
+<circle cx="6200" cy="470" r="15" onClick="selectStation('녹양', 1);" />
+<text x=6160 y=535 onClick="selectStation2(this, 1);">녹양</text>
+<circle cx="6400" cy="470" r="15" onClick="selectStation('가능', 1);" />
+<text x=6360 y=535 onClick="selectStation2(this, 1);">가능</text>
 <circle cx="6690" cy="470" r="15" onClick="selectStation('의정부', 1);" class=exp />
 <text x=6630 y=535 onClick="selectStation2(this, 1);">의정부</text>
 <circle cx="6880" cy="470" r="20" onClick="selectStation('회룡', 1);" class=exp />
@@ -1466,7 +1541,7 @@ text.line_name {
 <circle cx="6610" cy="570" r="15" onClick="selectStation('의정부시청', 1);" />
 <text x=6550 y=630 onClick="selectStation2(this, 1);">의정부<tspan dx=-100 dy=50>시청</tspan></text>
 <circle cx="6500" cy="540" r="15" onClick="selectStation('흥선', 1);" />
-<text x=6400 y=555 onClick="selectStation2(this, 1);">흥선</text>
+<text x=6440 y=600 onClick="selectStation2(this, 1);">흥선</text>
 <circle cx="6500" cy="360" r="15" onClick="selectStation('의정부중앙', 1);" />
 <text x=6280 y=375 onClick="selectStation2(this, 1);">의정부중앙</text>
 <circle cx="6500" cy="260" r="15" onClick="selectStation('동오', 1);" />
