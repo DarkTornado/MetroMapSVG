@@ -2,31 +2,4 @@
 © 2022 Dark Tornado, All rights reserved.
 
 * 니들은 메모장으로 이런거 하지 마라
-* 아직 미완성. [여기](https://darktornado.github.io/MetroMapSVG/)서 현황 구경 가능
-
-## 현황
-
-* [x] 1호선
-* [x] 2호선
-* [x] 3호선
-* [x] 4호선
-* [x] 5호선
-* [x] 6호선
-* [x] 7호선
-* [x] 8호선
-* [x] 9호선
-* [x] 경의중앙선
-* [x] 수인분당선
-* [x] 신분당선
-* [x] 경춘선
-* [x] 경강선
-* [x] 서해선
-* [x] 우이신설선
-* [x] 용인경전철
-* [x] 의정부경전철
-* [x] 김포도시철도
-* [x] 신림선
-* [x] 공항철도
-* [x] 인천1호선
-* [x] 인천2호선
-* [x] 기타 정보
+* [여기](https://darktornado.github.io/MetroMapSVG/)서 현황 구경 가능
