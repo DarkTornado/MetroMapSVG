@@ -45,4 +45,7 @@ Version 1.1 - 26 February 2007
 본 폰트 소프트웨어는 SIL 오픈 폰트 라이선스 버전 1.1에 따라 라이선스 취득을 하였습니다.
 본 라이선스는 하단에 복사되었고 http://scripts.sil.org/OFL의 FAQ란 에서도 열람가능 합니다.
 
+SIL 오픈 폰트 라이선스
+버전 1.1 (2007년 2월 26일) 
+
 [네이버 나눔 글꼴, 마루 부리 글꼴 라이센스 안내](https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=3497)
