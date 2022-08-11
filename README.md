@@ -4,7 +4,7 @@
 * 니들은 메모장으로 이런거 하지 마라
 * [여기](https://darktornado.github.io/MetroMapSVG/)에서 구경 가능
 * `dominant-baseline: middle;`가 작동하지 않아서, 사파리 브라우저에서는 글자글의 y축 위치가 다소 아래로 치우칠 수도 있음
-* 혹시, `부산 도시철도 노선도`가 탐나신다면, [이 레포지토리](https://github.com/DarkTornado/BusanSubwayLive)로 가보세요.
+* 혹시, `부산 도시철도 노선도 벡터 이미지`가 탐나신다면, [이 레포지토리](https://github.com/DarkTornado/BusanSubwayLive)로 가보세요.
 
 ## 노선도 이미지 라이선스
 * 아직 안정함
