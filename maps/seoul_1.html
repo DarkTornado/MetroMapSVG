@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no width=device-width" />
+<meta name="description" content="Subway Map" />
+<title>
+Subway Map
+</title>
+</head>
+<style>
+@font-face {
+    font-family: './fonts/NanumSquare';
+    src: url(NanumSquareR.woff);
+}
+body {
+    background-color: white;
+    font-family: 'NanumSquare';
+    margin: 0px;
+    font-size: 40px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+polyline {
+    stroke-width: 12;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+circle {
+    fill: #FFFFFF;
+    stroke : #000000;
+    stroke-width: 2;
+}
+text {
+    font-size: 30px;
+    text-anchor: start;
+}
+div.data_table {
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+}
+</style>
+<body>
+<div>
+<div class="subway_map" id="subway_map">
+<!-- Subway Map will be created via JS -->
+</div>
+</div>
+<script>
+var color = '#0052A4';
+var height = 7800;
+var points = [{
+    type: 'polyline',
+    data: '100,100 100,6200'
+}, {
+    type: 'polyline',
+    data: '100,4200 150,4250 450,4250 500,4300 500,6200 450,6250 150,6250 100,6300 100,7700'
+}, {
+    type: 'polyline',
+    data: '500,4500 450,4550 350,4550 300,4600'
+}, {
+    type: 'polyline',
+    data: '500,5800 450,5850 350,5850 300,5900'
+}];
+var pos = [
+{x: 100, y: 100, sta: '소요산'},
+{x: 100, y: 200, sta: '동두천'},
+{x: 100, y: 300, sta: '보산'},
+{x: 100, y: 400, sta: '동두천중앙'},
+{x: 100, y: 500, sta: '지행'},
+{x: 100, y: 600, sta: '덕정'},
+{x: 100, y: 700, sta: '덕계'},
+{x: 100, y: 800, sta: '양주'},
+{x: 100, y: 900, sta: '녹양'},
+{x: 100, y: 1000, sta: '가능'},
+{x: 100, y: 1100, sta: '의정부'},
+{x: 100, y: 1200, sta: '회룡'},
+{x: 100, y: 1300, sta: '망월사'},
+{x: 100, y: 1400, sta: '도봉산'},
+{x: 100, y: 1500, sta: '도봉'},
+{x: 100, y: 1600, sta: '방학'},
+{x: 100, y: 1700, sta: '창동'},
+{x: 100, y: 1800, sta: '녹천'},
+{x: 100, y: 1900, sta: '월계'},
+{x: 100, y: 2000, sta: '광운대'},
+{x: 100, y: 2100, sta: '석계'},
+{x: 100, y: 2200, sta: '신이문'},
+{x: 100, y: 2300, sta: '외대앞'},
+{x: 100, y: 2400, sta: '회기'},
+{x: 100, y: 2500, sta: '청량리'},
+{x: 100, y: 2600, sta: '제기동'},
+{x: 100, y: 2700, sta: '신설동'},
+{x: 100, y: 2800, sta: '동묘앞'},
+{x: 100, y: 2900, sta: '동대문'},
+{x: 100, y: 3000, sta: '종로5가'},
+{x: 100, y: 3100, sta: '종로3가'},
+{x: 100, y: 3200, sta: '종각'},
+{x: 100, y: 3300, sta: '시청'},
+{x: 100, y: 3400, sta: '서울'},
+{x: 100, y: 3500, sta: '남영'},
+{x: 100, y: 3600, sta: '용산'},
+{x: 100, y: 3700, sta: '노량진'},
+{x: 100, y: 3800, sta: '대방'},
+{x: 100, y: 3900, sta: '신길'},
+{x: 100, y: 4000, sta: '영등포'},
+{x: 100, y: 4100, sta: '신도림'},
+{x: 100, y: 4200, sta: '구로'},
+{x: 100, y: 4300, sta: '구일'},
+{x: 100, y: 4400, sta: '개봉'},
+{x: 100, y: 4500, sta: '오류동'},
+{x: 100, y: 4600, sta: '온수'},
+{x: 100, y: 4700, sta: '역곡'},
+{x: 100, y: 4800, sta: '소사'},
+{x: 100, y: 4900, sta: '부천'},
+{x: 100, y: 5000, sta: '중동'},
+{x: 100, y: 5100, sta: '송내'},
+{x: 100, y: 5200, sta: '부개'},
+{x: 100, y: 5300, sta: '부평'},
+{x: 100, y: 5400, sta: '백운'},
+{x: 100, y: 5500, sta: '동암'},
+{x: 100, y: 5600, sta: '간석'},
+{x: 100, y: 5700, sta: '주안'},
+{x: 100, y: 5800, sta: '도화'},
+{x: 100, y: 5900, sta: '제물포'},
+{x: 100, y: 6000, sta: '도원'},
+{x: 100, y: 6100, sta: '동인천'},
+{x: 100, y: 6200, sta: '인천'},
+{x: 500, y: 4300, sta: '가산디지털단지'},
+{x: 500, y: 4400, sta: '독산'},
+{x: 500, y: 4500, sta: '금천구청'},
+{x: 500, y: 4600, sta: '석수'},
+{x: 500, y: 4700, sta: '관악'},
+{x: 500, y: 4800, sta: '안양'},
+{x: 500, y: 4900, sta: '명학'},
+{x: 500, y: 5000, sta: '금정'},
+{x: 500, y: 5100, sta: '군포'},
+{x: 500, y: 5200, sta: '당정'},
+{x: 500, y: 5300, sta: '의왕'},
+{x: 500, y: 5400, sta: '성균관대'},
+{x: 500, y: 5500, sta: '화서'},
+{x: 500, y: 5600, sta: '수원'},
+{x: 500, y: 5700, sta: '세류'},
+{x: 500, y: 5800, sta: '병점'},
+{x: 500, y: 5900, sta: '세마'},
+{x: 500, y: 6000, sta: '오산대'},
+{x: 500, y: 6100, sta: '오산'},
+{x: 500, y: 6200, sta: '진위'},
+{x: 100, y: 6300, sta: '송탄'},
+{x: 100, y: 6400, sta: '서정리'},
+{x: 100, y: 6500, sta: '평택지제'},
+{x: 100, y: 6600, sta: '평택'},
+{x: 100, y: 6700, sta: '성환'},
+{x: 100, y: 6800, sta: '직산'},
+{x: 100, y: 6900, sta: '두정'},
+{x: 100, y: 7000, sta: '천안'},
+{x: 100, y: 7100, sta: '봉명'},
+{x: 100, y: 7200, sta: '쌍용'},
+{x: 100, y: 7300, sta: '아산'},
+{x: 100, y: 7400, sta: '탕정'},
+{x: 100, y: 7500, sta: '배방'},
+{x: 100, y: 7600, sta: '온양온천'},
+{x: 100, y: 7700, sta: '신창'},
+{x: 300, y: 4600, sta: '광명'},
+{x: 300, y: 5900, sta: '서동탄'}
+];
+var src = '<svg viewBox="0 0 800 ' + height + '">';
+    points.forEach((e) => {
+    src += '<' + e.type + ' points="' + e.data + '" fill="none" stroke="' + color + '" />';
+});
+pos.forEach((e) => {
+    src += '<circle cx="' + e.x + '" cy="' + e.y + '" r="12" />';
+    src += '<text x=' + (e.x + 30) + ' y=' + e.y + '>' + e.sta + '</text>';
+});
+
+
+document.getElementById("subway_map").innerHTML = src;
+
+</script>
+</body>
+</html>
