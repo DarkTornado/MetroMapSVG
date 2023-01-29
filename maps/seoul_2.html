@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no width=device-width" />
+<meta name="description" content="Subway Map" />
+<title>
+Subway Map
+</title>
+</head>
+<style>
+@font-face {
+    font-family: './fonts/NanumSquare';
+    src: url(NanumSquareR.woff);
+}
+body {
+    background-color: white;
+    font-family: 'NanumSquare';
+    margin: 0px;
+    font-size: 40px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+polyline, polygon {
+    stroke-width: 12;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+circle {
+    fill: #FFFFFF;
+    stroke : #000000;
+    stroke-width: 2;
+}
+text {
+    font-size: 30px;
+    text-anchor: start;
+}
+div.data_table {
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+}
+</style>
+<body>
+<div>
+<div class="subway_map" id="subway_map">
+<!-- Subway Map will be created via JS -->
+</div>
+</div>
+<script>
+var color = '#00A84D';
+var height = 3000;
+var points = [{
+    type: 'polyline',
+    data: '100,100 100,500'
+}, {
+    type: 'polygon',
+    data: '100,500 100,2500 150,2550 450,2550 500,2600 500,500 450,450 150,450'
+}, {
+    type: 'polyline',
+    data: '100,2500 100,2900'
+}];
+var pos = [
+{x: 100, y: 500, sta: '성수'},
+{x: 500, y: 500, sta: '건대입구'},
+{x: 500, y: 600, sta: '구의'},
+{x: 500, y: 700, sta: '강변'},
+{x: 500, y: 800, sta: '잠실나루'},
+{x: 500, y: 900, sta: '잠실'},
+{x: 500, y: 1000, sta: '잠실새내'},
+{x: 500, y: 1100, sta: '종합운동장'},
+{x: 500, y: 1200, sta: '삼성'},
+{x: 500, y: 1300, sta: '선릉'},
+{x: 500, y: 1400, sta: '역삼'},
+{x: 500, y: 1500, sta: '강남'},
+{x: 500, y: 1600, sta: '교대'},
+{x: 500, y: 1700, sta: '서초'},
+{x: 500, y: 1800, sta: '방배'},
+{x: 500, y: 1900, sta: '사당'},
+{x: 500, y: 2000, sta: '낙성대'},
+{x: 500, y: 2100, sta: '서울대입구'},
+{x: 500, y: 2200, sta: '봉천'},
+{x: 500, y: 2300, sta: '신림'},
+{x: 500, y: 2400, sta: '신대방'},
+{x: 500, y: 2500, sta: '구로디지털단지'},
+{x: 500, y: 2600, sta: '대림'},
+{x: 100, y: 2500, sta: '신도림'},
+{x: 100, y: 2400, sta: '문래'},
+{x: 100, y: 2300, sta: '영등포구청'},
+{x: 100, y: 2200, sta: '당산'},
+{x: 100, y: 2100, sta: '합정'},
+{x: 100, y: 2000, sta: '홍대입구'},
+{x: 100, y: 1900, sta: '신촌'},
+{x: 100, y: 1800, sta: '이대'},
+{x: 100, y: 1700, sta: '아현'},
+{x: 100, y: 1600, sta: '충정로'},
+{x: 100, y: 1500, sta: '시청'},
+{x: 100, y: 1400, sta: '을지로입구'},
+{x: 100, y: 1300, sta: '을지로3가'},
+{x: 100, y: 1200, sta: '을지로4가'},
+{x: 100, y: 1100, sta: '동대문역사문화공원'},
+{x: 100, y: 1000, sta: '신당'},
+{x: 100, y: 900, sta: '상왕십리'},
+{x: 100, y: 800, sta: '왕십리'},
+{x: 100, y: 700, sta: '한양대'},
+{x: 100, y: 600, sta: '뚝섬'},
+
+//{x: 100, y: 500, sta: '성수 (지선)'},
+{x: 100, y: 400, sta: '용답'},
+{x: 100, y: 300, sta: '신답'},
+{x: 100, y: 200, sta: '용두'},
+{x: 100, y: 100, sta: '신설동'},
+
+//{x: 100, y: 2500, sta: '신도림 (지선)'},
+{x: 100, y: 2600, sta: '도림천'},
+{x: 100, y: 2700, sta: '양천구청'},
+{x: 100, y: 2800, sta: '신정네거리'},
+{x: 100, y: 2900, sta: '까치산'}
+];
+var src = '<svg viewBox="0 0 800 ' + height + '">';
+    points.forEach((e) => {
+    src += '<' + e.type + ' points="' + e.data + '" fill="none" stroke="' + color + '" />';
+});
+pos.forEach((e) => {
+    src += '<circle cx="' + e.x + '" cy="' + e.y + '" r="12" />';
+    src += '<text x=' + (e.x + 30) + ' y=' + e.y + '>' + e.sta + '</text>';
+});
+
+
+document.getElementById("subway_map").innerHTML = src;
+
+</script>
+</body>
+</html>
