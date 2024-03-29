@@ -1,6 +1,6 @@
 <!--
 전철 노선도 벡터 이미지
-© 2022-2023 Dark Tornado, All rights reserved.
+© 2022-2024 Dark Tornado, All rights reserved.
 Github : https://github.com/DarkTornado/MetroMapSVG
 -->
 <html>
@@ -133,6 +133,13 @@ text.index {
 <line class=index x1="3480" y1="600" x2="3580" y2="600" stroke="#000000" />
 <circle cx="3530" cy="600" r="15" class=exp />
 <text class=index x=3600 y=600>급행정차역</text>
+
+<!-- GTX-A -->
+<polyline points="
+    7480,4330 7200,5000 5980,5000 5260,5360 5260,5630
+    " fill="none" stroke="#9A6884" />
+<text class=line_name style='fill:#9A6884;' x=7480 y=4150>GTX-A</text>
+<text class=line_name style='fill:#9A6884;' x=5450 y=5630>GTX-A</text>
 
 <!-- 1호선/경원선&종로선&경인선 -->
 <polyline points="
@@ -315,10 +322,10 @@ text.index {
 
 <!-- 용인경전철 -->
 <polyline points="
-    5400,5160 5400,5500 7050,5500
+    5400,5160 5400,5500 7200,5500
     " fill="none" stroke="#56AD2D" />
-<text class=line_name style='fill:#56AD2D;' x=5700 y=5300>용인경전철</text>
-<text class=line_name style='fill:#56AD2D;' x=7100 y=5600>용인경전철</text>
+<text class=line_name style='fill:#56AD2D;' x=5720 y=5350>용인경전철</text>
+<text class=line_name style='fill:#56AD2D;' x=7300 y=5600>용인경전철</text>
 
 <!-- 김포도시철도 -->
 <polyline points="
@@ -358,7 +365,7 @@ text.index {
     " fill="none" stroke="#F5A251" />
 <text class=line_name style='fill:#F5A251;' x=270 y=1800>인천2호선</text>
 <text class=line_name style='fill:#F5A251;' x=2200 y=5100>인천2호선</text>
-  
+
 
 <!--1호선/경원선-->
 <circle cx="4000" cy="470" r="15" onClick="onIconClicked('연천');" />
@@ -1429,8 +1436,9 @@ text.index {
 <text x=5790 y=5210 onClick="onTextClicked(this);">보정</text>
 <circle cx="5660" cy="5160" r="15" onClick="onIconClicked('구성');" />
 <text x=5660 y=5210 onClick="onTextClicked(this);">구성</text>
+<text x=5660 y=5250 onClick="onTextClicked(this);" style='font-size: 28px;'>(GTX 미개통)</text>
 <circle cx="5530" cy="5160" r="15" onClick="onIconClicked('신갈');" />
-<text x=5530 y=5210 onClick="onTextClicked(this);">신갈</text>
+<text x=5530 y=5110 onClick="onTextClicked(this);">신갈</text>
 <circle cx="5400" cy="5160" r="20" onClick="onIconClicked('기흥');" class=exp />
 <text x=5400 y=5110 onClick="onTextClicked(this);" class=bold>기흥</text>
 <circle cx="5290" cy="5160" r="15" onClick="onIconClicked('상갈');" />
@@ -1540,6 +1548,8 @@ text.index {
 <text x=8635 y=235 onClick="onTextClicked(this);" class=left>춘천</text>
 
 <!--경강선-->
+<circle cx="6710" cy="5000" r="20" onClick="onIconClicked('성남');" />
+<text x=6750 y=4950 onClick="onTextClicked(this);" class=bold>성남</text>
 <circle cx="7300" cy="5298" r="15" onClick="onIconClicked('삼동');" />
 <text x=7300 y=5350 onClick="onTextClicked(this);" class=right>삼동</text>
 <circle cx="7500" cy="5400" r="15" onClick="onIconClicked('경기광주');" />
@@ -1592,34 +1602,34 @@ text.index {
 <text x=7600 y=110 onClick="onTextClicked(this);">차량기지임시승강장</text>
 
 <!--용인경전철-->
-<circle cx="5400" cy="5300" r="15" onClick="onIconClicked('강남대');" />
-<text x=5425 y=5300 onClick="onTextClicked(this);" class=left>강남대</text>
-<circle cx="5400" cy="5400" r="15" onClick="onIconClicked('지석');" />
-<text x=5425 y=5400 onClick="onTextClicked(this);" class=left>지석</text>
-<circle cx="5400" cy="5500" r="15" onClick="onIconClicked('어정');" />
-<text x=5400 y=5550 onClick="onTextClicked(this);">어정</text>
-<circle cx="5550" cy="5500" r="15" onClick="onIconClicked('동백');" />
-<text x=5550 y=5550 onClick="onTextClicked(this);">동백</text>
-<circle cx="5700" cy="5500" r="15" onClick="onIconClicked('초당');" />
-<text x=5700 y=5550 onClick="onTextClicked(this);">초당</text>
-<circle cx="5850" cy="5500" r="15" onClick="onIconClicked('삼가');" />
-<text x=5850 y=5550 onClick="onTextClicked(this);">삼가</text>
-<circle cx="6000" cy="5500" r="15" onClick="onIconClicked('시청·용인대');" />
-<text x=6000 y=5450 onClick="onTextClicked(this);">시청·용인대</text>
-<circle cx="6150" cy="5500" r="15" onClick="onIconClicked('명지대');" />
-<text x=6150 y=5550 onClick="onTextClicked(this);">명지대</text>
-<circle cx="6300" cy="5500" r="15" onClick="onIconClicked('김량장');" />
-<text x=6300 y=5550 onClick="onTextClicked(this);">김량장</text>
-<circle cx="6450" cy="5500" r="15" onClick="onIconClicked('운동장·송담대');" />
-<text x=6450 y=5450 onClick="onTextClicked(this);">운동장·송담대</text>
-<circle cx="6600" cy="5500" r="15" onClick="onIconClicked('고진');" />
-<text x=6600 y=5550 onClick="onTextClicked(this);">고진</text>
-<circle cx="6750" cy="5500" r="15" onClick="onIconClicked('보평');" />
-<text x=6750 y=5550 onClick="onTextClicked(this);">보평</text>
-<circle cx="6900" cy="5500" r="15" onClick="onIconClicked('둔전');" />
-<text x=6900 y=5550 onClick="onTextClicked(this);">둔전</text>
-<circle cx="7050" cy="5500" r="15" onClick="onIconClicked('전대·에버랜드');" />
-<text x=7050 y=5450 onClick="onTextClicked(this);">전대·에버랜드</text>
+<circle cx="5400" cy="5350" r="15" onClick="onIconClicked('강남대');" />
+<text x=5425 y=5350 onClick="onTextClicked(this);" class=left>강남대</text>
+<circle cx="5400" cy="5500" r="15" onClick="onIconClicked('지석');" />
+<text x=5400 y=5550 onClick="onTextClicked(this);">지석</text>
+<circle cx="5550" cy="5500" r="15" onClick="onIconClicked('어정');" />
+<text x=5550 y=5550 onClick="onTextClicked(this);">어정</text>
+<circle cx="5700" cy="5500" r="15" onClick="onIconClicked('동백');" />
+<text x=5700 y=5550 onClick="onTextClicked(this);">동백</text>
+<circle cx="5850" cy="5500" r="15" onClick="onIconClicked('초당');" />
+<text x=5850 y=5550 onClick="onTextClicked(this);">초당</text>
+<circle cx="6000" cy="5500" r="15" onClick="onIconClicked('삼가');" />
+<text x=6000 y=5550 onClick="onTextClicked(this);">삼가</text>
+<circle cx="6150" cy="5500" r="15" onClick="onIconClicked('시청·용인대');" />
+<text x=6150 y=5450 onClick="onTextClicked(this);">시청·용인대</text>
+<circle cx="6300" cy="5500" r="15" onClick="onIconClicked('명지대');" />
+<text x=6300 y=5550 onClick="onTextClicked(this);">명지대</text>
+<circle cx="6450" cy="5500" r="15" onClick="onIconClicked('김량장');" />
+<text x=6450 y=5550 onClick="onTextClicked(this);">김량장</text>
+<circle cx="6600" cy="5500" r="15" onClick="onIconClicked('운동장·송담대');" />
+<text x=6600 y=5450 onClick="onTextClicked(this);">운동장·송담대</text>
+<circle cx="6750" cy="5500" r="15" onClick="onIconClicked('고진');" />
+<text x=6750 y=5550 onClick="onTextClicked(this);">고진</text>
+<circle cx="6900" cy="5500" r="15" onClick="onIconClicked('보평');" />
+<text x=6900 y=5550 onClick="onTextClicked(this);">보평</text>
+<circle cx="7050" cy="5500" r="15" onClick="onIconClicked('둔전');" />
+<text x=7050 y=5550 onClick="onTextClicked(this);">둔전</text>
+<circle cx="7200" cy="5500" r="15" onClick="onIconClicked('전대·에버랜드');" />
+<text x=7200 y=5450 onClick="onTextClicked(this);">전대·에버랜드</text>
 
 <!--우이신설선-->
 <circle cx="5050" cy="810" r="15" onClick="onIconClicked('북한산우이');" />
@@ -1701,6 +1711,10 @@ text.index {
 <circle cx="4110" cy="4440" r="15" onClick="onIconClicked('관악산');" />
 <text x=4135 y=4440 onClick="onTextClicked(this);" class=left>관악산</text>
 
+<!-- GTX-A -->
+<circle cx="5260" cy="5630" r="15" onClick="onIconClicked('동탄');" />
+<text x=5230 y=5630 onClick="onTextClicked(this);" class=right>동탄</text>
+
 
 <!-- KTX 로고 -->
 <image xlink:href='./images/KTX.svg' x='2640' y='1422' width='80px'/>
@@ -1734,10 +1748,11 @@ text.index {
 <image xlink:href='./images/SRT.svg' x='7440' y='4220' width='80px'/>
 <image xlink:href='./images/SRT.svg' x='6210' y='5900' width='80px'/>
 <image xlink:href='./images/SRT.svg' x='7845' y='5900' width='80px'/>
+<image xlink:href='./images/SRT.svg' x='5150' y='5570' width='80px'/>
 
 <!-- 저작권 표시 -->
 <text x=20 y=5980 class=left>이 벡터 이미지에는 네이버에서 제공한 나눔글꼴이 적용되어 있습니다.</text>
-<text x=8980 y=5980 class='right bold'>© 2022-2023 Dark Tornado, All rights reserved.</text>
+<text x=8980 y=5980 class='right bold'>© 2022-2024 Dark Tornado, All rights reserved.</text>
 
 </svg>
 </div>
