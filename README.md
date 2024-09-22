@@ -1,5 +1,5 @@
 # 수도권 전철 노선도 벡터 이미지
-© 2022-2023 Dark Tornado, All rights reserved.
+© 2022-2024 Dark Tornado, All rights reserved.
 
 * [여기](https://darktornado.github.io/MetroMapSVG/)에서 구경 가능
 * 사파리 브라우저에서는 `dominant-baseline: middle;`가 작동하지 않아서, 글자들의 y축 위치가 다소 아래로 치우칠 수도 있어요.
